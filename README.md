@@ -1,23 +1,44 @@
 # RTP Queue Plugin
 
-## Overview
+## 🌍 Overview
 
-A lightweight Minecraft plugin that enables players to queue up for random teleportation (RTP) with a partner. Features include:
+RTP Queue is a versatile Minecraft plugin that adds an exciting random teleportation (RTP) system to your server, allowing players to explore new territories together.
 
-- Automatic partner matching for random teleports
-- Configurable world boundaries
-- Customizable messages and sounds
-- Safe location detection
-- World and queue management
-- Flexible configuration options
+## ✨ Features
 
-## Commands
+- 🔀 Automatic partner matching for random teleports
+- 🌈 Fully customizable configuration
+- 🔊 Custom sound effects
+- 📝 Configurable messages
+- 🚫 Disabled world support
+- ⏱️ Cooldown management
+- 🌐 Safe location detection
+
+## 🎮 Commands
 
 | Command | Description | Permission |
 |---------|-------------|------------|
-| `/rtpqueue` or `/rtpq` | Join the RTP queue | Everyone |
+| `/rtpqueue` or `/rtpq` | Join the RTP queue | All players |
 | `/rtpqclear` | Clear the RTP queue | `rtpq.clear` |
 
-## How It Works
+## 📦 Installation
 
-Explore new territories together with an easy-to-use random teleport system! When two players join the queue, they are automatically teleported to a random safe location in the world.
+1. Download the plugin JAR
+2. Place in your server's `plugins` folder
+3. Restart the server
+4. Configure `config.yml` and `messages.yml` as needed
+
+## 🛠️ Configuration
+
+Easily customize:
+- Queue size
+- Disabled worlds
+- Teleport boundaries
+- Sound effects
+- Messages
+- Titles and action bars
+
+## 🤝 Support
+
+- Create an issue on GitHub
+- Join our Discord server
