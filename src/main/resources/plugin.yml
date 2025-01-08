@@ -1,0 +1,31 @@
+name: Rtpqueue
+version: '${project.version}'
+main: me.errcruze.rtpqueue.Rtpqueue
+api-version: '1.13'
+commands:
+  rtpqueue:
+    description: Join the RTP queue to be teleported with another player
+    aliases: [rtpq]
+    usage: /<command>
+  rtpqclear:
+    description: Clear the RTP queue
+    permission: rtpq.clear
+    usage: /<command>
+  rtpqreload:
+    description: Reload the plugin configuration
+    permission: rtpq.reload
+    usage: /<command>
+
+permissions:
+  rtpq.clear:
+    description: Allows clearing the RTP queue
+    default: op
+  rtpq.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  rtpq.cooldown.bypass:
+    description: Allows bypassing the cooldown timer
+    default: op
+  rtpq.notify:
+    description: Receives notifications about queue auto-clear
+    default: op

@@ -1,0 +1,66 @@
+# RTPQueue Messages Configuration
+# Available placeholders:
+# {prefix} - Plugin prefix
+# {player} - Player name
+# {time} - Time remaining
+# {queue_size} - Current queue size
+# {queue_needed} - Players needed to teleport
+# {world} - World name
+# {x} - X coordinate
+# {y} - Y coordinate
+# {z} - Z coordinate
+# {partner} - Partner's name
+# {attempts} - Number of attempts
+
+prefix: '&8[&bRTPQueue&8] &r'
+
+messages:
+  general:
+    no-permission: '{prefix}&cYou don''t have permission to use this command!'
+    player-only: '{prefix}&cThis command can only be used by players!'
+    reload-success: '{prefix}&aConfiguration reloaded successfully!'
+    reload-failed: '{prefix}&cFailed to reload configuration! Check console for errors.'
+
+  queue:
+    joined: |
+      {prefix}&aYou've joined the RTP queue!
+      &7Players in queue: &f{queue_size}&7/&f{queue_needed}
+      &7Wait for another player to join...
+    already-in-queue: '{prefix}&cYou''re already in the RTP queue!'
+    left-queue: '{prefix}&7You''ve left the RTP queue.'
+    queue-cleared: '{prefix}&aThe RTP queue has been cleared.'
+    auto-cleared: '{prefix}&7The queue has been automatically cleared.'
+    queue-full: '{prefix}&cThe queue is currently full! Please try again later.'
+
+  cooldown:
+    in-cooldown: '{prefix}&cPlease wait &f{time} seconds &cbefore using this again.'
+    bypass: '{prefix}&7Cooldown bypassed with permission.'
+
+  teleport:
+    success: |
+      {prefix}&aYou've been teleported to explore together!
+      &7Location: &f{x}, {y}, {z}
+    failed: '{prefix}&cCouldn''t find a safe location. Please try again!'
+    world-not-found: '{prefix}&cError: World &f{world} &cnot found!'
+    unsafe-location: '{prefix}&cCouldn''t find a safe location after {attempts} attempts.'
+    partner-found: |
+      {prefix}&aFound a partner! 
+      &7Teleporting in &f3 &7seconds...
+    cancelled: '{prefix}&cTeleportation has been cancelled.'
+
+  errors:
+    world-disabled: '{prefix}&cRTP is disabled in this world!'
+    invalid-world: '{prefix}&cInvalid world specified in configuration!'
+    invalid-coordinates: '{prefix}&cInvalid coordinate ranges in configuration!'
+    player-offline: '{prefix}&cYour teleport partner went offline!'
+    generic-error: '{prefix}&cAn error occurred. Please try again later.'
+
+titles:
+  teleport-success:
+    title: "&b&lRTP Success!"
+    subtitle: "&7You've been paired with &f{partner}"
+
+  debug:
+    location-found: '{prefix}&7[Debug] Found safe location at: {x}, {y}, {z}'
+    attempt-failed: '{prefix}&7[Debug] Attempt {attempts} failed to find safe location'
+    queue-info: '{prefix}&7[Debug] Queue size: {queue_size}, Required: {queue_needed}'

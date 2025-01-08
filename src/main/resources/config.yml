@@ -1,0 +1,64 @@
+# RTPQueue Configuration
+
+# Time settings
+cooldown:
+  enabled: true
+  time: 50 # seconds
+  bypass-permission: 'rtpq.cooldown.bypass'
+
+# Teleportation settings
+teleport:
+  world: 'world'  # Default world for teleportation
+  min-x: -2000
+  max-x: 2000
+  min-z: -2000
+  max-z: 2000
+  safe-location:
+    max-attempts: 10  # Number of attempts to find safe location
+    min-y: 0  # Minimum Y level for teleportation
+    max-y: 256  # Maximum Y level for teleportation
+  disabled-worlds:
+    - "world_nether"
+    - "world_the_end"
+    - "minigames"
+
+# Queue settings
+queue:
+  auto-clear: true
+  clear-interval: 120  # seconds (2 minutes)
+  max-queue-size: 2  # Number of players needed to trigger teleport
+
+# Sound effects
+sounds:
+  enabled: true
+  join-queue:
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.0
+  leave-queue:
+    sound: BLOCK_NOTE_BLOCK_BASS
+    volume: 1.0
+    pitch: 0.5
+  teleport-success:
+    sound: ENTITY_ENDERMAN_TELEPORT
+    volume: 1.0
+    pitch: 1.0
+  error:
+    sound: ENTITY_VILLAGER_NO
+    volume: 1.0
+    pitch: 0.5
+
+# Title messages
+titles:
+  teleport-success:
+    enabled: true
+    fade-in: 10
+    stay: 70
+    fade-out: 20
+    title: "&b&lRTP Success!"
+    subtitle: "&7You've been teleported with &f{partner}"
+
+# Debug settings
+debug:
+  enabled: false
+  log-locations: false
